@@ -1,0 +1,27 @@
+div#contact
+  div.container-fluid.contact-form-container
+    div.row
+      div.vertical-text-left.col-lg-1.col-sm-1
+        h1.contact Contact Me
+      div.col-12.col-sm-12.col-md-12.col-lg-11
+        div.container.contact-form
+          h3 Send Me Message
+          form(method="POST")
+            div.row
+              div.col-12.col-sm12.col-md-6
+                label(for="Name")
+                input#name.form-control(type="text", name="name",placeholder="Name", required)
+
+                label(for="Number")
+                input#number.form-control(type="text",name="number",placeholder="Number",)
+
+                label(for="Email")
+                input#email.form-control(type="email",name="email",placeholder="Email", required)
+
+              div.col-12.col-sm12.col-md-6
+                label(for="Message")
+                textarea#message.form-control(name="message", rows="3",placeholder="Message", required)
+
+              button.btn.btn-contact(type="submit") Send Message
+
+

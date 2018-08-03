@@ -1,0 +1,59 @@
+/* ------About Page--------- */
+
+#about {
+  // margin-bottom: 6rem;
+  // margin-top: 6rem;
+  background-color: lightgray;
+
+  padding: 80px 0;
+
+  // @media (max-width: 768px) {
+  //   margin-top: 3rem;
+  // }
+}
+
+.paragraph {
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+}
+
+// Progress
+
+.myProgress {
+  margin-left: 3rem;
+  width: 400px;
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+  .progress {
+    margin-bottom: 1.25rem;
+  }
+}
+
+// JS animations
+.progress-animate {
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.progress {
+  height: 3px;
+}
+
+.progress-bar {
+  background-color: #101010;
+}
+
+.about-h2 {
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    color: red;
+    // padding-bottom: 16rem;
+  }
+}

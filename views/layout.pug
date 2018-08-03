@@ -1,0 +1,66 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+
+    title= `${title || 'Home'} | Mouaz Meda`
+
+    // Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    // Ensure proper rendering and zooming on touch devices
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    // Search Engine Optimization
+    meta(name="description", content=`${description  || 'Just a tiny little website'}`)
+    meta(name="robots", content=`${robots} || index, follow`)
+
+    // Stylesheets
+
+    link(rel='stylesheet', href='/dist/style.css')
+    //- link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet")
+
+  body
+    //- block header
+    //-   include partials/navbar
+
+    //- block messages
+    //-   if locals.flashes
+    //-     .container
+    //-       .flash-messages
+    //-         - const categories = Object.keys(locals.flashes)
+    //-         each category in categories
+    //-           each message in flashes[category]
+    //-             .flash(class=`alert alert-${category}`)
+    //-               != message
+    //-               button.close(type='button', data-dismiss='alert', aria-label='Close')
+    //-                 span(aria-hidden='true') ×
+    block navbar
+      include partials/navbar
+
+    block home
+      include home
+
+    block about
+      include about
+
+    block technologies
+      include technologies
+
+    block services
+      include services
+
+    block projects
+      include projects
+
+    block contact
+      include contact
+
+    block footer
+      include partials/footer
+
+    block scripts
+      script(src="/dist/app.bundle.js")
+      script(src="/dist/home.bundle.js")
+      //- script(src="/javascript/particles.js")

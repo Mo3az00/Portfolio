@@ -1,0 +1,55 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "start.js",
+  "scripts": {
+    "start": "node ./start.js",
+    "watch": "nodemon ./start.js --ignore public/",
+    "assets": "webpack -w --display-max-modules 0",
+    "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "^4.0.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "dotenv": "^5.0.0",
+    "emojilib": "^2.2.12",
+    "es6-promisify": "^5.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "font-awesome": "^4.7.0",
+    "helmet": "^3.11.0",
+    "html-to-text": "^4.0.0",
+    "jquery": "^3.3.1",
+    "juice": "^4.2.3",
+    "mongoose": "^5.0.11",
+    "node-mailer": "^0.1.1",
+    "passport": "^0.4.0",
+    "popper.js": "^1.14.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "expose-loader": "^0.7.5",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.17.2",
+    "postcss-loader": "^2.1.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.11.0"
+  },
+  "author": "Dominik Hanke",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/noreading/expressjs-bootstrap-boilerplate"
+  }
+}

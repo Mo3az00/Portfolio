@@ -1,0 +1,275 @@
+/**
+  * Contents
+  *
+  *   1. Imports
+  *   2. My Styles
+  */
+
+/* 1. Imports
+-------------------------------------------*/
+
+@import "bootstrap-custom";
+@import "~bootstrap/scss/bootstrap";
+
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import "navbar";
+@import "about";
+@import "services";
+@import "contact";
+@import "projects";
+@import "footer";
+
+/* 2. My Styles
+-------------------------------------------*/
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* jumbotron things */
+
+// .center-vh {
+//   margin-top: 25vh;
+// }
+
+// MAJD STYLES
+
+/* Home Image */
+
+.background-image {
+  background: url("/images/move.jpeg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.centering-vh {
+  margin-top: 25vh;
+}
+
+// .background-image .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(2, 2, 2, 0.5);
+// }
+.jumbo-h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+// .background-image h1 span {
+//   font-weight: normal;
+//   color: #ff8b38;
+// }
+
+.jumbo-1 ~ .jumbo-p {
+  font-size: 40px;
+}
+
+.jumbo-1 ~ .jumbo-p:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #fff;
+  margin: 25px 0px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.5);
+  // position: relative;
+  // margin: 10% 10% 10% 10%;
+  // padding: 2rem;
+  // margin-top: 25vh;
+
+  .btn,
+  .btn-primary {
+    border-color: #9d9d9d;
+    color: white;
+    background-color: #101010;
+  }
+}
+
+// .my-h4 {
+//   color: #9d9d9d;
+//   font-size: 6rem;
+// }
+
+.jumbo-p,
+.btn-primary {
+  color: #9d9d9d;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  // .jumbo {
+  // 	background-color: rgba(255,255,255, 0.5) ;
+  // }
+
+  // .my-h4 {
+  // 	color: black;
+  // 	font-size: 4rem;
+  // }
+  //  .jumbo-p {
+  // 	color: black;
+  // 	font-size: 2rem;
+  // }
+
+  .my-h4 {
+    font-size: 4rem;
+  }
+  .jumbo-p {
+    font-size: 2rem;
+  }
+}
+
+/* ------Vertical Text--------- */
+
+.vertical-text-left {
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 1rem;
+  border-color: #9d9d9d;
+  height: 20rem;
+  // margin-right: auto;
+
+  h1 {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+  .about {
+    margin-top: 10rem;
+  }
+
+  .services {
+    margin-top: 10rem;
+  }
+
+  .contact {
+    margin-top: 11.5rem;
+  }
+
+  // @media (max-width: 768px) {
+  //   display: none;
+  // }
+}
+
+.vertical-text-right {
+  border-top: solid;
+  border-left: solid;
+  border-bottom: solid;
+  border-width: 1rem;
+  border-color: #9d9d9d;
+  height: 20rem;
+  // margin-left: auto;
+
+  h1 {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+  .technologies {
+    margin-top: 12rem;
+  }
+
+  .projects {
+    margin-top: 12rem;
+  }
+}
+
+.vertical-text-right,
+.vertical-text-left {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/* ------Vision Page--------- */
+
+/*
+
+// .my-carousel {
+// 	margin-bottom: 6rem;
+
+// 	@media (max-width: 768px){
+// 		margin-top: 3rem;
+//   }
+// }
+
+// .carousel {
+// 	min-height: 30rem;
+// 	position: relative;
+// 	background-image: url('/images/pattern7777.jpeg');
+// 	border: block ;
+// 	background-repeat: no-repeat;
+// 	background-position:center;
+
+// 	p {
+// 		color:black;
+// 	}
+// }
+
+// .carousel-item {
+// 	text-align:center;
+// 	padding: 4rem 0 0 12rem;
+//     width: 75%;
+
+//     @media (max-width: 768px) {
+// 		padding:0 0 0 0 ;
+// 		width:100%;
+// 	}
+
+// }
+
+// .carousel-control-prev-icon , .carousel-control-next-icon {
+// 	background-color:black;
+// }
+
+// .carousel-inner p {
+// 	text-align: center;
+//   margin: 2rem;
+
+//   @media (min-width : 1600px) {
+//     width: 36rem;
+//     margin-left: 20rem;
+//     }
+
+// }
+
+// .quote-pic {
+// 	width: 5rem;
+// 	height: 5rem;
+// 	border-radius:50%;
+// 	margin: 0 auto;
+//   display: block;
+
+//   @media (min-width : 1600px) {
+//     margin-left: 35rem;
+//     }
+
+// }
+
+*/
+// .background-image {
+//   background: url("/images/2greenleaves.jpeg");
+//   // background-color: rgba(255, 255, 255, 0.5);
+//   // width: 100%;
+//   height: 100vh;
+//   background-size: cover;
+//   position: relative;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
