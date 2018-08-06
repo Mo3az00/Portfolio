@@ -40,6 +40,15 @@ $(function() {
   // });
 });
 
+$(".btn-myStyle").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("#contact").offset().top
+    },
+    1000
+  );
+});
+
 // change the color of the navbar while scrolling
 $(function() {
   $(window).scroll(function() {
@@ -52,4 +61,8 @@ $(function() {
       navbar.removeClass("scrolled");
     }
   });
+});
+
+$(".project-img").hover(function() {
+  $(this).toggleClass("hoverIt");
 });

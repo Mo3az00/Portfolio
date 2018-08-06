@@ -16,6 +16,7 @@ $fa-font-path: "~font-awesome/fonts";
 
 @import "navbar";
 @import "about";
+@import "quotes";
 @import "services";
 @import "contact";
 @import "projects";
@@ -30,45 +31,14 @@ body {
 
 /* jumbotron things */
 
-// .center-vh {
-//   margin-top: 25vh;
+// .jumbo {
+//   margin: 5rem;
 // }
 
-// MAJD STYLES
-
-/* Home Image */
-
-.background-image {
-  background: url("/images/move.jpeg") no-repeat top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-}
-
-.centering-vh {
-  margin-top: 25vh;
-}
-
-// .background-image .overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(2, 2, 2, 0.5);
-// }
 .jumbo-h1 {
   font-weight: bold;
   font-size: 60px;
 }
-// .background-image h1 span {
-//   font-weight: normal;
-//   color: #ff8b38;
-// }
 
 .jumbo-1 ~ .jumbo-p {
   font-size: 40px;
@@ -83,6 +53,32 @@ body {
   margin: 25px 0px;
 }
 
+.jumbo-p,
+.btn-primary {
+  color: #9d9d9d;
+  font-size: 2rem;
+}
+
+.btn-myStyle {
+  border-color: #9d9d9d;
+  color: white;
+  background-color: #101010;
+  border-radius: 8px;
+}
+
+/* Home Image */
+
+.background-image {
+  background: url("/images/sky-night.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -94,51 +90,40 @@ body {
   // margin: 10% 10% 10% 10%;
   // padding: 2rem;
   // margin-top: 25vh;
+}
 
-  .btn,
-  .btn-primary {
-    border-color: #9d9d9d;
-    color: white;
-    background-color: #101010;
+.centering-vh {
+  margin-top: 25vh;
+}
+
+/* ------media queries for mobiles and tabs devices--------- */
+
+.horizontal-title {
+  @media (min-width: 993px) {
+    display: none;
+  }
+
+  @media (max-width: 993px) {
+    // margin-left: 6rem;
+    margin-bottom: 80px;
   }
 }
 
-// .my-h4 {
-//   color: #9d9d9d;
-//   font-size: 6rem;
-// }
-
-.jumbo-p,
-.btn-primary {
-  color: #9d9d9d;
-  font-size: 2rem;
-}
-
-@media (max-width: 768px) {
-  // .jumbo {
-  // 	background-color: rgba(255,255,255, 0.5) ;
-  // }
-
-  // .my-h4 {
-  // 	color: black;
-  // 	font-size: 4rem;
-  // }
-  //  .jumbo-p {
-  // 	color: black;
-  // 	font-size: 2rem;
-  // }
-
-  .my-h4 {
-    font-size: 4rem;
-  }
-  .jumbo-p {
-    font-size: 2rem;
-  }
+.head-border-center:after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 3px;
+  background-color: #9d9d9d;
+  margin: 25px auto;
+  // margin-left: 12rem;
 }
 
 /* ------Vertical Text--------- */
 
 .vertical-text-left {
+  position: absolute;
+  left: 0;
   border-top: solid;
   border-right: solid;
   border-bottom: solid;
@@ -162,13 +147,11 @@ body {
   .contact {
     margin-top: 11.5rem;
   }
-
-  // @media (max-width: 768px) {
-  //   display: none;
-  // }
 }
 
 .vertical-text-right {
+  position: absolute;
+  right: 0;
   border-top: solid;
   border-left: solid;
   border-bottom: solid;
@@ -181,7 +164,7 @@ body {
     transform: rotate(-90deg);
     white-space: nowrap;
   }
-  .technologies {
+  .quotes {
     margin-top: 12rem;
   }
 
@@ -192,84 +175,33 @@ body {
 
 .vertical-text-right,
 .vertical-text-left {
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     display: none;
   }
 }
 
-/* ------Vision Page--------- */
+.hoverIt {
+  box-shadow: 1px 1px 5px grey;
+  z-index: 2;
+  transition: all 200ms ease;
+  transform: scale(1.05);
+}
 
-/*
+/* CENTERING  CLASSES  */
 
-// .my-carousel {
-// 	margin-bottom: 6rem;
+.z-index-0 {
+  z-index: 0;
+}
+.z-index-minus-1 {
+  z-index: -1;
+}
+.right-0 {
+  right: 0;
+}
 
-// 	@media (max-width: 768px){
-// 		margin-top: 3rem;
-//   }
-// }
-
-// .carousel {
-// 	min-height: 30rem;
-// 	position: relative;
-// 	background-image: url('/images/pattern7777.jpeg');
-// 	border: block ;
-// 	background-repeat: no-repeat;
-// 	background-position:center;
-
-// 	p {
-// 		color:black;
-// 	}
-// }
-
-// .carousel-item {
-// 	text-align:center;
-// 	padding: 4rem 0 0 12rem;
-//     width: 75%;
-
-//     @media (max-width: 768px) {
-// 		padding:0 0 0 0 ;
-// 		width:100%;
-// 	}
-
-// }
-
-// .carousel-control-prev-icon , .carousel-control-next-icon {
-// 	background-color:black;
-// }
-
-// .carousel-inner p {
-// 	text-align: center;
-//   margin: 2rem;
-
-//   @media (min-width : 1600px) {
-//     width: 36rem;
-//     margin-left: 20rem;
-//     }
-
-// }
-
-// .quote-pic {
-// 	width: 5rem;
-// 	height: 5rem;
-// 	border-radius:50%;
-// 	margin: 0 auto;
-//   display: block;
-
-//   @media (min-width : 1600px) {
-//     margin-left: 35rem;
-//     }
-
-// }
-
-*/
-// .background-image {
-//   background: url("/images/2greenleaves.jpeg");
-//   // background-color: rgba(255, 255, 255, 0.5);
-//   // width: 100%;
-//   height: 100vh;
-//   background-size: cover;
-//   position: relative;
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }
+.top-0 {
+  top: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}

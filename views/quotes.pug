@@ -1,0 +1,31 @@
+div#quotes
+  div.quotes-background
+    div.container-fluid
+      div.row.px-lg-5.justify-content-center
+        div.col-sm-12.col-md-10.col-lg-10.text-center.service-item
+          div#carouselExampleIndicators.carousel.slide.d-flex.align-items-center(data-ride='carousel')
+            ol.carousel-indicators(aria-hidden="true")
+              li(data-target='#carouselExampleIndicators', data-slide-to='0' class="active")
+              li(data-target='#carouselExampleIndicators', data-slide-to='1')
+              li(data-target='#carouselExampleIndicators', data-slide-to='2')
+            .carousel-inner
+              .carousel-item.text-center.py-5
+                i.fa.fa-quote-left.fa-3x(aria-hidden="true")
+                h5.text-center "If you are not willing to risk the usual, you will have to settle for the ordinary."
+                br
+                span — Jim Rohn
+
+              .carousel-item.active.text-center.py-5
+                i.fa.fa-quote-left.fa-3x(aria-hidden="true")
+                h5.text-center "Success consists of going from failure to failure without loss of enthusiasm."
+                br
+                span  — Winston Churchill
+
+              .carousel-item.text-center.py-5
+                i.fa.fa-quote-left.fa-3x(aria-hidden="true")
+                h5.text-center "Live as if you were to die tomorrow. Learn as if you were to live forever."
+                br
+                span — Mahatma Gandhi
+
+      //- div.vertical-text-right.col-lg-1.col-md-1.col-sm-1.col-1
+      //-   h1.quotes quotes

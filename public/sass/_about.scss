@@ -6,10 +6,6 @@
   background-color: lightgray;
 
   padding: 80px 0;
-
-  // @media (max-width: 768px) {
-  //   margin-top: 3rem;
-  // }
 }
 
 .paragraph {
@@ -45,15 +41,4 @@
 
 .progress-bar {
   background-color: #101010;
-}
-
-.about-h2 {
-  @media (min-width: 768px) {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    color: red;
-    // padding-bottom: 16rem;
-  }
 }

@@ -1,7 +1,6 @@
 /* My Projects */
 
 #projects {
-  background-color: lightcoral;
   padding: 80px 0;
 }
 .card {
@@ -10,4 +9,44 @@
 }
 .card-img-top {
   padding: 2rem;
+}
+
+.project-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  text-shadow: 1px 1px 3px grey;
+}
+
+figure:hover + span {
+  bottom: -18px;
+  opacity: 1;
+}
+
+.project-img {
+  margin-top: 1.875rem;
+}
+
+.project-card figure img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.project-card figure:hover img,
+.project-card figure img:focus {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }

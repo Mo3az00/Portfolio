@@ -1,15 +1,11 @@
 div.container-fluid.container-down
   div.row
     div.text-bottom-left.col-12.col-sm-6.col-lg-6
-      p Here you can find all the links to all my social media accounts and channels :
-        | facebook , twitter , linkedin , youtube ... etc.
+      p Here you can find all the links to all my social media accounts and channels
       p Don't hesitate to keep in touch with me :)
     div.social-media-icons.container-media.col-12.col-sm-6.col-lg-6
-      a.fa.fa-github.media-icon(href='https://github.com/Mo3az00' target='_blank')
-      a.fa.fa-codepen.media-icon(href='#')
-      a.fa.fa-linkedin.media-icon(href='#')
-      a.fa.fa-xing.media-icon(href='#')
-      //- a.fa.fa-twitter.media-icon(href='#')
-      //- a.fa.fa-google-plus.media-icon(href='#')
+      each item in helpers.footerIcons
+        a(href=`${item.href}` class=`${item.class}` target='_blank' rel="noopener")
+
 footer
   p.text-center 2018 &copy; Designed by Mouaz Meda
