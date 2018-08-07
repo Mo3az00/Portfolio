@@ -1,45 +1,41 @@
-//- section.main-nav
-//- nav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-//-   a.navbar-brand.link-my-brand(href="/")
-//-     i.fa.fa-star m.
-//-   button.navbar-toggler(
-//-     type="button"
-//-     data-toggle="collapse"
-//-     data-target="#navbarSupportedContent"
-//-     aria-controls="navbarSupportedContent"
-//-     aria-expanded="false"
-//-     aria-label="Toggle navigation")
-//-       span.navbar-toggler-icon
-//-   div#navbarSupportedContent.collapse.navbar-collapse
-//-     ul.navbar-nav.mr-auto
-//-       each entry in helpers.navigation
-//-         li.nav-item
-//-           a.link-my.nav-link(
-//-             data-scroll=`${entry.dataScroll}`
-//-             href=`${entry.href}`
-//-             class=(currentPath === entry.href ? 'active' : '')
-//-             ) #{entry.name}
-
-
-
-
-nav.navbar.navbar-expand-lg.navbar-dark.myNav-home.fixed-top
+nav#nav-main.navbar.navbar-expand-lg.navbar-dark.myNav-home.fixed-top
   a.navbar-brand.link-my-brand(href="#my")
     i.fa.fa-star(aria-hidden="true") &nbsp; m .
   button.navbar-toggler(
     type="button"
     data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
+    data-target="#nav-main-content"
+    aria-controls="nav-main-content"
     aria-expanded="false"
     aria-label="Toggle navigation")
       span.navbar-toggler-icon
-  div#navbarSupportedContent.collapse.navbar-collapse
+  div#nav-main-content.collapse.navbar-collapse
     ul.navbar-nav.mr-auto
-      each entry in helpers.navigation
+      each item in helpers.navigation
         li.nav-item
-          a.link-my.nav-link(
-          data-scroll=`${entry.dataScroll}`
-          href=`${entry.href}`
-          class=(currentPath === entry.href ? 'active' : '')
-          ) #{entry.name}
+          if (currentPath === '/')
+            a.link-my.nav-link(href=`${item.href}`) #{item.name}
+          else
+            a.link-my.nav-link(href=`${baseUrl}${item.href}` data-scroll=`${entry.dataScroll}`) #{item.name}
+
+//- OLD WAY
+//- nav#nav-main.navbar.navbar-expand-lg.navbar-dark.myNav-home.fixed-top
+//-   a.navbar-brand.link-my-brand(href="#my")
+//-     i.fa.fa-star(aria-hidden="true") &nbsp; m .
+//-   button.navbar-toggler(
+//-     type="button"
+//-     data-toggle="collapse"
+//-     data-target="#nav-main-content"
+//-     aria-controls="nav-main-content"
+//-     aria-expanded="false"
+//-     aria-label="Toggle navigation")
+//-       span.navbar-toggler-icon
+//-   div#nav-main-content.collapse.navbar-collapse
+//-     ul.navbar-nav.mr-auto
+//-       each entry in helpers.navigation
+//-         li.nav-item
+//-           a.link-my.nav-link(
+//-           data-scroll=`${entry.dataScroll}`
+//-           href=`${entry.href}`
+//-           class=(currentPath === entry.href ? 'active' : '')
+//-           ) #{entry.name}
