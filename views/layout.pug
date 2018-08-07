@@ -21,20 +21,7 @@ html
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet")
 
   body
-    //- block header
-    //-   include partials/navbar
 
-    //- block messages
-    //-   if locals.flashes
-    //-     .container
-    //-       .flash-messages
-    //-         - const categories = Object.keys(locals.flashes)
-    //-         each category in categories
-    //-           each message in flashes[category]
-    //-             .flash(class=`alert alert-${category}`)
-    //-               != message
-    //-               button.close(type='button', data-dismiss='alert', aria-label='Close')
-    //-                 span(aria-hidden='true') ×
     block navbar
       include partials/navbar
 

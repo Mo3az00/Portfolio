@@ -31,9 +31,11 @@ body {
 
 /* jumbotron things */
 
-// .jumbo {
-//   margin: 5rem;
-// }
+.jumbo {
+  a:hover {
+    color: white;
+  }
+}
 
 .jumbo-h1 {
   font-weight: bold;
@@ -69,7 +71,7 @@ body {
 /* Home Image */
 
 .background-image {
-  background: url("/images/sky-night.jpg") no-repeat top center;
+  background: url("/images/main-background.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

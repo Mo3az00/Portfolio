@@ -1,9 +1,10 @@
 div.container-fluid.container-down
   div.row
-    div.text-bottom-left.col-12.col-sm-6.col-lg-6
-      p Here you can find all the links to all my social media accounts and channels
-      p Don't hesitate to keep in touch with me :)
-    div.social-media-icons.container-media.col-12.col-sm-6.col-lg-6
+    div.text-bottom-left.col-12.col-sm-6.col-lg-6.my-auto
+      //- p Here you can find all the links to all my social media accounts and channels
+      //- p Don't hesitate to keep in touch with me :)
+      p Let's keep in touch :)
+    div.social-media-icons.container-media.col-12.col-sm-6.col-lg-6.my-auto
       each item in helpers.footerIcons
         a(href=`${item.href}` class=`${item.class}` target='_blank' rel="noopener")
 

@@ -1,5 +1,7 @@
 import "./bootstrap";
 
+// ProgressBar animation
+
 $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top;
   var elementBottom = elementTop + $(this).outerHeight();
@@ -40,6 +42,15 @@ $(function() {
   // });
 });
 
+$(".link-my-brand").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("#my").offset().top
+    },
+    1000
+  );
+});
+
 $(".btn-myStyle").click(function() {
   $("html,body").animate(
     {
@@ -52,7 +63,6 @@ $(".btn-myStyle").click(function() {
 // change the color of the navbar while scrolling
 $(function() {
   $(window).scroll(function() {
-    // let navbar = $('.navbar');
     let my = $("#my");
     let navbar = $(".navbar");
     if ($(window).scrollTop() >= my.height() - navbar.height()) {
@@ -63,6 +73,19 @@ $(function() {
   });
 });
 
-$(".project-img").hover(function() {
+$(".project-img, .btn-myStyle , .btn-contact").hover(function() {
   $(this).toggleClass("hoverIt");
 });
+
+// const scrollspy = document.querySelector("#nav-main");
+
+// if (scrollspy) {
+//   $("body").scrollspy({
+//     target: ".nav-main",
+//     offset: navbarHeight + 11
+//   });
+
+//   $('[data-spy="scroll"]').on("activate.bs.scrollspy", function() {
+//     $("nav-link").addClass("active");
+//   });
+// }
