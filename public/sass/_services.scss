@@ -2,6 +2,8 @@
 
 #services {
   background-color: lightgray;
+  padding-top: 70px;
+  padding-bottom: 70px;
   // margin-bottom: 6rem;
   // margin-top: 6rem;
   // background-color: lightgreen;
@@ -13,16 +15,14 @@
   // min-height: 400px;
 }
 
-#services .services-background {
-  // background: rgba(2, 2, 2, 0.6);
-  // color: #fff;
-  // min-height: 400px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
 .service-item {
-  margin: 0 auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @media (max-width: 993px) {
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
 
 .my-service {

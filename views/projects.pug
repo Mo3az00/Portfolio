@@ -1,14 +1,15 @@
-div#projects.position-relative.z-index-0
+div#projects.position-relative
   div.horizontal-title
     h2.text-center.head-border-center My Projects
   div.container-fluid.px-lg-5.position-relative
-    div.row.justify-content-center.px-lg-5
-      each project in helpers.projects
-        div.col-sm-12.col-md-8.col-lg-5.project-card.text-center
-          a(href=`${project.link}` target="_blank" rel="noopener")
-            figure
-              img.img-fluid.project-img(src=`${project.imgSrc}` alt=`${project.imgAlt}`)
-            span #{project.name}
+    .px-lg-5
+      div.row.justify-content-center.px-lg-5
+        each project in helpers.projects
+          div.col-12.col-sm-12.col-md-8.col-lg-4.project-card.text-center
+            a(href=`${project.link}` target="_blank" rel="noopener")
+              figure
+                img.img-fluid.project-img(src=`${project.imgSrc}` alt=`${project.imgAlt}`)
+              span #{project.name}
 
-    div.vertical-text-right.col-lg-1.col-sm-1.z-index-minus-1.top-0
-      h1.projects My Projects
+  div.vertical-text-right.p-4
+    h1.projects My Projects

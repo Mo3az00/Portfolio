@@ -123,60 +123,81 @@ body {
 
 /* ------Vertical Text--------- */
 
-.vertical-text-left {
+.vertical-text-left-about {
   position: absolute;
   left: 0;
-  border-top: solid;
-  border-right: solid;
+  top: 50%;
   border-bottom: solid;
+  border-right: solid;
+  border-left: solid;
   border-width: 1rem;
   border-color: #9d9d9d;
-  height: 20rem;
-  // margin-right: auto;
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: bottom;
 
-  h1 {
-    transform: rotate(-90deg);
-    white-space: nowrap;
-  }
-  .about {
-    margin-top: 10rem;
-  }
+  // h1 {
+  //   white-space: nowrap;
+  // }
+  // .about {
+  //   margin-top: 10rem;
+  // }
 
-  .services {
-    margin-top: 10rem;
-  }
+  // .services {
+  //   margin-top: 8rem;
+  // }
 
-  .contact {
-    margin-top: 11.5rem;
-  }
+  // .contact {
+  //   margin-top: 11.5rem;
+  // }
+}
+
+.vertical-text-left-services {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid;
+  border-width: 1rem;
+  border-color: #9d9d9d;
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: bottom;
+}
+
+.vertical-text-left-contact {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid;
+  border-width: 1rem;
+  border-color: #9d9d9d;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: top left;
 }
 
 .vertical-text-right {
   position: absolute;
   right: 0;
-  border-top: solid;
+  top: 50%;
+  border-right: solid;
   border-left: solid;
-  border-bottom: solid;
+  border-top: solid;
   border-width: 1rem;
   border-color: #9d9d9d;
-  height: 20rem;
-  // margin-left: auto;
+  transform: rotate(-90deg) translateX(100%);
+  transform-origin: bottom right;
 
-  h1 {
-    transform: rotate(-90deg);
-    white-space: nowrap;
-  }
-  .quotes {
-    margin-top: 12rem;
-  }
-
-  .projects {
-    margin-top: 12rem;
-  }
+  // .projects {
+  //   margin-top: 10rem;
+  // }
 }
 
 .vertical-text-right,
-.vertical-text-left {
+.vertical-text-left-about,
+.vertical-text-left-services,
+.vertical-text-left-contact {
   @media (max-width: 992px) {
     display: none;
   }
@@ -206,4 +227,9 @@ body {
 }
 .bottom-0 {
   bottom: 0;
+}
+
+.shift-half-down {
+  left: 50%;
+  transform: translateX(-50%);
 }
