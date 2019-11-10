@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "bootstrap": "^4.0.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^2.0.1",
