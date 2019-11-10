@@ -11,11 +11,18 @@ exports.navigation = [
 ];
 
 exports.projects = [
+  // {
+  //   name: "Node Friends",
+  //   link: "https://node-friends.com",
+  //   imgSrc: "/images/projects/node-friends.jpg",
+  //   imgAlt: "Node Friends"
+  // },
   {
-    name: "Node Friends",
-    link: "https://node-friends.com",
-    imgSrc: "/images/projects/node-friends.jpg",
-    imgAlt: "Node Friends"
+    name: "BreweryDB API",
+    link: "https://brewerey-db-api.herokuapp.com/",
+    imgSrc: "/images/projects/brewerydb.jpg",
+    imgAlt: "BreweryDB API",
+    description: "Have a quick look about many sorts of beers !"
   },
   {
     name: "MARVEL API",

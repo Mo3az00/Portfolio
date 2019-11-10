@@ -38,8 +38,6 @@ figure:hover + span {
   margin-top: 1.875rem;
 }
 
-.project-card {
-}
 
 .project-card figure img {
   -webkit-filter: grayscale(100%);
@@ -48,8 +46,20 @@ figure:hover + span {
   transition: 0.3s ease-in-out;
 }
 
-.project-card figure:hover img,
-.project-card figure img:focus {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+@media (min-width: 767px) {
+  .project-card figure:hover img,
+  .project-card figure img:focus {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
 }
+
+@media (max-width: 768px) {
+  .project-card figure img,
+  .project-card figure img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+}
+
+

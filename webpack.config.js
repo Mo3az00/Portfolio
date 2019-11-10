@@ -1,26 +1,26 @@
-const path = require("path");
-const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoprefixer = require("autoprefixer");
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 // JS file handler
 const javascript = {
   test: /\.(js)$/,
   use: [
     {
-      loader: "babel-loader",
-      options: { presets: ["env"] }
+      loader: 'babel-loader',
+      options: { presets: ['env'] }
     }
   ]
 };
 
 // postCSS loader
 const postcss = {
-  loader: "postcss-loader",
+  loader: 'postcss-loader',
   options: {
     sourceMap: true,
     plugins() {
-      return [autoprefixer({ browsers: "last 3 versions" })];
+      return [autoprefixer({ browsers: 'last 3 versions' })];
     }
   }
 };
@@ -29,9 +29,9 @@ const postcss = {
 const styles = {
   test: /\.(scss)$/,
   use: ExtractTextPlugin.extract([
-    "css-loader?sourceMap",
+    'css-loader?sourceMap',
     postcss,
-    "sass-loader?sourceMap"
+    'sass-loader?sourceMap'
   ])
 };
 
@@ -46,10 +46,10 @@ const fontAwesome = {
   test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
   use: [
     {
-      loader: "file-loader",
+      loader: 'file-loader',
       options: {
-        name: "[name].[ext]",
-        outputPath: "fonts/" // where the fonts will go
+        name: '[name].[ext]',
+        outputPath: 'fonts/' // where the fonts will go
       }
     }
   ]
@@ -57,28 +57,29 @@ const fontAwesome = {
 
 // expose jQuery
 const exposejQuery = {
-  test: require.resolve("jquery"),
-  loader: "expose-loader?$!expose-loader?jQuery"
+  test: require.resolve('jquery'),
+  loader: 'expose-loader?$!expose-loader?jQuery'
 };
 
 // bundle everything
 const config = {
   entry: {
-    app: "./public/javascript/app.js",
-    home: "./public/javascript/home.js"
+    app: './public/javascript/app.js',
+    home: './public/javascript/home.js'
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, "public", "dist"),
-    filename: "[name].bundle.js"
+    path: path.resolve(__dirname, 'public', 'dist'),
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [exposejQuery, javascript, styles, fontAwesome]
     // add loaders for particles.js and exports-loader
   },
-  plugins: [new ExtractTextPlugin("style.css")]
+  plugins: [new ExtractTextPlugin('style.css')]
 };
 
-process.noDeprecation = true;
+// TODO: Update NPM packages and change to true;
+process.noDeprecation = false;
 
 module.exports = config;
