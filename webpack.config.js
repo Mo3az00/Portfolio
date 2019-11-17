@@ -68,14 +68,12 @@ module.exports = () => {
     ]
   };
 
-  // TODO: Update NPM packages and change to true;
   // process.noDeprecation = false;
 
   return {
     mode: prod ? "production" : "development",
     entry: {
       app: "./public/javascript/app.js",
-      home: "./public/javascript/home.js"
     },
     devtool: "source-map",
     output: {
