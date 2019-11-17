@@ -29,6 +29,26 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+// Flash messages
+
+//.container-flash-messages {
+//  z-index: 1;
+//  position: absolute;
+//  right: 0;
+//  left: 0;
+//
+//  .flash {
+//    display: grid;
+//    grid-template-columns: 1fr max-content;
+//    place-items: center;
+//    text-align: center;
+//  }
+//}
+
+.hidden,
+.hide {
+  display: none;
+}
 /* jumbotron things */
 
 .jumbo {
@@ -208,6 +228,7 @@ body {
   z-index: 2;
   transition: all 200ms ease;
   transform: scale(1.05);
+  color: #ffffff !important;
 }
 
 /* CENTERING  CLASSES  */

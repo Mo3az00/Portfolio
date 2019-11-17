@@ -8,15 +8,22 @@ div#contact.position-relative
     div.row.px-lg-5.justify-content-center
       div.col-12.col-sm-12.col-md-10.col-lg-8
         div.container.contact-form
-          h3 Send Me Message
-          form(method="POST")
+          h3#contact-header Send Me Message
+          #contact-success.alert.alert-success.hidden
+            p
+              strong Thanks for your message!
+
+            p I'll get back to you as soon as possible.
+
+          #contact-error.alert.alert-danger.hidden
+          form#contact-form(action="/contact" method="POST")
             div.row
               div.col-12.col-sm12.col-md-6
                 label(for="Name")
                 input#name.form-control(type="text", name="name",placeholder="Name *", required)
 
-                label(for="Number")
-                input#number.form-control(type="text",name="number",placeholder="Phone",)
+                label(for="Phone")
+                input#phone.form-control(type="text",name="phone",placeholder="Phone",)
 
                 label(for="Email")
                 input#email.form-control(type="email",name="email",placeholder="Email *", required)
@@ -25,6 +32,8 @@ div#contact.position-relative
                 label(for="Message")
                 textarea#message.form-control(name="message", rows="3",placeholder="Message *", required)
 
-              button.btn.btn-contact(type="submit") Send Message
+              button.btn.btn-contact(type="submit")
+                i.fa.fa-paper-plane-o
+                |  Send Message
 
 

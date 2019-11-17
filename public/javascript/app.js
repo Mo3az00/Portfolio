@@ -1,4 +1,5 @@
 import "./bootstrap";
+import contactForm from "./contactForm";
 
 // ProgressBar animation
 
@@ -101,6 +102,8 @@ if (scrollspy) {
     $("nav-link").addClass("active");
   });
 }
+
+contactForm();
 
 // navbar scrolls smoothly (old way)
 

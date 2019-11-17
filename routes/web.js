@@ -11,7 +11,11 @@ router.get("/", (request, response) => {
   });
 });
 
-router.post("/", catchErrors(ContactFormController.submitForm));
+router.post("/contact",
+  ContactFormController.validationRules,
+  ContactFormController.errorHandling,
+  catchErrors(ContactFormController.submitContactForm)
+);
 
 // Export our router
 module.exports = router;

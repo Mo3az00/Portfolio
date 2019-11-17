@@ -1,7 +1,7 @@
 /* Nav */
 
 .nav-item {
-  margin-left: 1rem;
+  //margin-left: 1rem;
 }
 
 .navbar-dark {
@@ -34,9 +34,10 @@
 
 /* shadow working one */
 
-.link-my .link-my-brand {
+.link-my  {
   transition: 0.6s;
   text-decoration: none;
+  padding-left: 1rem !important;
 }
 
 .link-my:hover {

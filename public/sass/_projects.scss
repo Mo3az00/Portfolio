@@ -13,7 +13,6 @@
 
 .project-card span {
   position: absolute;
-  bottom: 0;
   left: 0;
   z-index: 0;
   display: block;
@@ -25,14 +24,12 @@
   text-decoration: none;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  opacity: 0;
   text-shadow: 1px 1px 3px grey;
+  bottom: 0;
+  opacity: 0;
 }
 
-figure:hover + span {
-  bottom: -18px;
-  opacity: 1;
-}
+
 
 .project-img {
   margin-top: 1.875rem;
@@ -52,6 +49,11 @@ figure:hover + span {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
+  figure:hover + span {
+    bottom: -18px;
+    opacity: 1;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -59,6 +61,11 @@ figure:hover + span {
   .project-card figure img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
+  }
+
+  .project-card  span {
+    bottom: -18px !important;
+    opacity: 1 !important;
   }
 }
 
